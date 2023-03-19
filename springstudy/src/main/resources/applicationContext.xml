@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    
+<!--    注解开发-->
+<!--<context:component-scan base-package="dao"/>-->
+<!--<context:component-scan base-package="service"/>-->
+
+
+<!--    1.导入spring的坐标spring-context，对应版本是5.2.10.RELEASE-->
+
+<!--    2.配置Bean-->
+<!--    bean标签表示配置Bean-->
+<!--    id属性表示给Bean起名字,不能相同-->
+<!--    class属性表示给bean定义类型-->
+<!--    name属性为别名，同id-->
+<!--    scope属性判断是否为单例对象，prototype不是单例对象，默认为singleton-->
+<!--    <bean id="bookDao" name="dao dao1 dao2" class="dao.impl.BookDaoImpl"/>-->
+<!--    <bean id="bookService" class="service.impl.BookServiceImpl" scope="singleton">-->
+<!--&lt;!&ndash;        7.配置service与dao的关系&ndash;&gt;-->
+<!--&lt;!&ndash;        property标签表示配置当前Bean的属性&ndash;&gt;-->
+<!--&lt;!&ndash;        name属性表示配置哪一个具体的属性，BookserviceImpl属性的名字&ndash;&gt;-->
+<!--&lt;!&ndash;        ref属性表示参照哪一个bean，bean标签的id&ndash;&gt;-->
+<!--        <property name="bookDao" ref="bookDao"></property>-->
+<!--&lt;!&ndash;        基本数据类型的注入&ndash;&gt;-->
+<!--        <property name="num" value="10"></property>-->
+<!--        -->
+<!--&lt;!&ndash;        构造器注入&ndash;&gt;-->
+<!--&lt;!&ndash;        constructor-arg&ndash;&gt;-->
+<!--    </bean>-->
+
+
+<!--    autowire  自动装配-->
+<!--    <bean id="bookService" class="service.impl.BookServiceImpl" scope="singleton" autowire="byType"/>-->
+
+
+<!--    实例化bean-->
+<!--    1.构造方法实例化bean-->
+<!--    2.使用静态工厂实例化bean-->
+<!--    3.使用实例工厂实例化bean-->
+
+<!--    <bean id="BookDAO" class="factory.BookDaoFactoryBean"/>-->
+
+
+
+<!--        管理DruidDataSource对象-->
+<!--    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--       <property name="driverClassName" value=""></property>-->
+<!--       <property name="url" value=""></property>-->
+<!--       <property name="username" value=""></property>-->
+<!--       <property name="password" value=""></property>-->
+<!--    </bean>-->
+
+<!--    加载properties文件-->
+<!--    1.开命名空间-->
+<!--    2.使用context命名空间-->
+<!--    <context:property-placeholder location="classpath*:*.properties"/>-->
+<!--    3.使用${}读取加载的属性值-->
+<!--    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--        <property name="driverClassName" value="${}"></property>-->
+<!--        <property name="url" value=""></property>-->
+<!--        <property name="username" value=""></property>-->
+<!--        <property name="password" value=""></property>-->
+<!--    </bean>-->
+</beans>
